@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Poppins";
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--violet);
+    text-align: center;
+}
+
+.container {
+    margin: 2.3rem;
+    max-width: 1200px;
+}
+
+.logo {
+    margin-bottom: 4rem;
+}
+
+.logo img:first-child {
+    margin-bottom: 4rem;
+    width: 150px;
+}
+
+.text {
+    margin-bottom: 2rem;
+}
+
+.text h1 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.text p {
+    color: white;
+}
+
+.register {
+    padding: 0.8rem;
+    width: 13rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    color: var(--violet);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 4rem;
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+    font-family: "Open Sans";
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register:hover {
+    background-color: var(--magenta);
+    color: white;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social i {
+    color: white;
+    outline: 1px solid white;
+    outline-offset: 0.3rem;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    text-align: center;
+}
+
+.social i:hover {
+    color: var(--magenta);
+    outline: 1px solid var(--magenta);
+    transform: translateY(-5px);
+}
+
+@media (min-width: 800px) {
+    body {
+        align-items: center;
+        background-image: url(images/bg-desktop.svg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 6rem;
+    }
+
+    .main {
+        text-align: left;
+    }
+
+    .social {
+        position: absolute;
+        bottom: 3rem;
+        right: 3rem;
+    }
+}
